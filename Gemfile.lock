@@ -70,6 +70,7 @@ GEM
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     ffi (1.9.3)
+    foodcritic (0.2.0)
     gitkeep (0.3.2)
     gssapi (1.0.3)
       ffi (>= 1.0.1)
@@ -190,5 +191,6 @@ PLATFORMS
 DEPENDENCIES
   berkshelf
   chef
+  foodcritic
   gitkeep
   knife-solo
