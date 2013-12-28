@@ -20,8 +20,10 @@ Vagrant.configure("2") do |config|
       }
     }
 
+    # this takes precedence over node/xxx.json which is a file
+    # that gets created when you run knife solo cook user@hostname
     chef.run_list = [
-        "recipe[chef4::default]"
+        "recipe[apache2]"
     ]
   end
 end
