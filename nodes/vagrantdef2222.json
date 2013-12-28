@@ -1,1 +1,7 @@
-{"run_list":["recipe[myface]"]}
+{
+  "run_list":["recipe[myface]"],
+  "myface": {
+    "user": "anotheruser",
+    "group": "anotheruser"
+  }
+}
