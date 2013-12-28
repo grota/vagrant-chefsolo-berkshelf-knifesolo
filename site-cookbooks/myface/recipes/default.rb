@@ -10,9 +10,17 @@ log "WELCOME TO CHEF MOFO" do
   level :info
 end
 
+group "myface"
+
+user "myface" do
+  group "myface"
+  system true
+  shell "/bin/bash"
+end
+
 artifact_deploy "myface" do
   version "1.0.0"
-  artifact_location "http://24.media.tumblr.com/tumblr_m7fpxfkHM81rzupqxo1_500.png"
+  artifact_location "http://dl.dropbox.com/u/31081437/myface-1.0.0.tar.gz"
   deploy_to "/srv/myface"
   owner "myface"
   group "myface"
