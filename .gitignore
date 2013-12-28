@@ -10,4 +10,5 @@
 # Bundler
 bin/*
 .bundle/*
+.bundle
 /cookbooks/

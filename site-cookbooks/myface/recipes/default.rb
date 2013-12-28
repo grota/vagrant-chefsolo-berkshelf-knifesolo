@@ -6,3 +6,6 @@
 # 
 # All rights reserved - Do Not Redistribute
 #
+log "WELCOME TO CHEF MOFO" do
+  level :info
+end

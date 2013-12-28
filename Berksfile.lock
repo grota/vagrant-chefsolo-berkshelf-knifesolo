@@ -1,7 +1,7 @@
 {
   "sources": {
-    "apache2": {
-      "locked_version": "1.8.14"
+    "myface": {
+      "path": "./site-cookbooks/myface"
     }
   }
 }
