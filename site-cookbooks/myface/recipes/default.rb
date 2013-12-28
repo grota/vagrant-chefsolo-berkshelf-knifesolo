@@ -10,6 +10,10 @@ log "WELCOME TO CHEF MOFO" do
   level :info
 end
 
+include_recipe 'tomcat'
+include_recipe "tomcat::users"
+
+
 group node[:myface][:group]
 
 user node[:myface][:user] do
