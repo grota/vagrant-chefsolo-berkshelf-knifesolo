@@ -2,6 +2,48 @@
   "sources": {
     "myface": {
       "path": "./site-cookbooks/myface"
+    },
+    "artifact": {
+      "locked_version": "0.10.10"
+    },
+    "nexus": {
+      "locked_version": "3.0.1"
+    },
+    "java": {
+      "locked_version": "1.15.4"
+    },
+    "windows": {
+      "locked_version": "1.12.4"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "powershell": {
+      "locked_version": "1.1.2"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
+    },
+    "nginx": {
+      "locked_version": "1.6.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "yum": {
+      "locked_version": "3.0.2"
+    },
+    "apt": {
+      "locked_version": "2.3.4"
+    },
+    "runit": {
+      "locked_version": "1.5.5"
+    },
+    "yum-epel": {
+      "locked_version": "0.2.0"
+    },
+    "ohai": {
+      "locked_version": "1.1.12"
     }
   }
 }
