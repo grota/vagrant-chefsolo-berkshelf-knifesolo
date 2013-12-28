@@ -10,10 +10,10 @@ log "WELCOME TO CHEF MOFO" do
   level :info
 end
 
-group "myface"
+group node[:myface][:group]
 
-user "myface" do
-  group "myface"
+user node[:myface][:user] do
+  group  node[:myface][:group]
   system true
   shell "/bin/bash"
 end
@@ -22,7 +22,7 @@ artifact_deploy "myface" do
   version "1.0.0"
   artifact_location "http://dl.dropbox.com/u/31081437/myface-1.0.0.tar.gz"
   deploy_to "/srv/myface"
-  owner "myface"
-  group "myface"
+  owner node[:myface][:user]
+  group node[:myface][:group]
   action :deploy
 end
