@@ -1,0 +1,1 @@
+{"name":"data_bag_item_111_222","json_class":"Chef::DataBagItem","chef_type":"data_bag_item","data_bag":"111","raw_data":{"id":"222","somekey":{"encrypted_data":"uKuVGscMn80LcG+wqpH7vSClluX3Btd/szJb+w3mPlt+xCgjJMu1AOIAIGCh\nPV5F\n","iv":"8IwxaNJ1K/Gfrlndz/8XUQ==\n","version":1,"cipher":"aes-256-cbc"}}}

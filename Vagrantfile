@@ -21,8 +21,16 @@ Vagrant.configure("2") do |config|
       # this takes precedence over node/xxx.json which is a file
       # that gets created when you run knife solo cook user@hostname
       chef.run_list = [
-        "recipe[myface]"
+        "recipe[myface::database]",
+        "recipe[myface::default]",
       ]
+      # vagrant puts this file in /tmp/encrypted_data_bag_secret
+      chef.encrypted_data_bag_secret_key_path = 'some_key_file'
+
+      # I need to set this to a string this otherwise ruby complains
+      # because someone (Berkshelf?) sets this as an array.
+      # Vagrants mounts this as an additional shared folder
+      chef.data_bags_path = 'data_bags'
     end
   end
 
