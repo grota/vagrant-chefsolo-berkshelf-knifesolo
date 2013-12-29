@@ -1,5 +1,5 @@
-Notes
-=====
+What is this?
+=============
 This Repo is used only to show my experiments with Vagrant + Chef-solo + Berkshelf.  
 Foodcritic and knife-solo have been used but can be regarded as _side dishes_.
 
@@ -7,16 +7,10 @@ Requirements
 ============
 You need Vagrant, and the Berkshelf plugin (`vagrant plugin install vagrant-berkshelf`).
 
-I used a ssh config alias with the name of `vagrantdef2222` and with the content from `vagrant ssh-config`.
+I defined an ssh config entry (`~/.ssh/config`): the name is `vagrantdef2222` and the content comes from `vagrant ssh-config`.
 
-You can then create a gemset and do a bundle install.
+You can create a gemset and do a `bundle install`.
 
-The vm is provisionless so you need to run a `knife solo prepare vagrantdef2222` after a `vagrant up`.
+I wanted to use a provisioner-less base box so you need to run a `knife solo prepare vagrantdef2222` after a `vagrant up`.
 
-Then you can run `vagrant provision` or `knife solo cook vagrantdef2222`.
-
-Launch Chef-Solo
-================
-
-`vagrant provision` uses the run\_list in the Vagrantfile.
-`knife solo cook vagrantdef2222` uses knife solo to upload cookbooks and launch chef solo on the vagrant machine (see private repo's ssh config entry)
+Then you can then run `vagrant provision` or `knife solo cook vagrantdef2222` to execute `chef solo`.
