@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.hostname = "chef4-berkshelf"
   config.vm.box = "opscode-ubuntu-12.04-i386"
+  config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04-i386_provisionerless.box"
   config.vm.network :private_network, ip: "33.33.33.10"
   config.vm.define 'vagvmname' do |conf|
     conf.vm.network :forwarded_port, guest: 8080, host: 9090
