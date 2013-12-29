@@ -1,7 +1,12 @@
 {
-  "run_list":["recipe[myface]"],
+  "run_list":["recipe[myface::database]", "recipe[myface::default]"],
   "myface": {
     "user": "anotheruser",
     "group": "anotheruser"
+  },
+  "mysql": {
+    "server_root_password": "manager",
+    "server_debian_password": "debpasswd",
+    "server_repl_password": "replpasswd"
   }
 }

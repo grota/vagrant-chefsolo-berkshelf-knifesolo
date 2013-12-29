@@ -23,10 +23,14 @@ user node[:myface][:user] do
 end
 
 artifact_deploy "myface" do
-  version "1.0.0"
-  artifact_location "http://dl.dropbox.com/u/31081437/myface-1.0.0.tar.gz"
-  deploy_to "/srv/myface"
+  version node[:myface][:artifact_version]
+  artifact_location node[:myface][:artifact_url]
+  deploy_to node[:myface][:deploy_to]
   owner node[:myface][:user]
   group node[:myface][:group]
   action :deploy
+end
+
+link "#{node[:tomcat][:webapp_dir]}/myface.war" do
+    to "#{node[:myface][:deploy_to]}/current/myface.war"
 end
